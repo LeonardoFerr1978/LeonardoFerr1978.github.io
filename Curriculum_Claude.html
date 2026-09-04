@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Leonardo Andrés Ferreira Vélez — Hoja de vida</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Karla:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{
+    --wine:#631d33;
+    --wine-deep:#4c1526;
+    --wine-soft:#7c2c44;
+    --gold:#c99a3c;
+    --ink:#221419;
+    --ink-soft:#6b5b61;
+    --paper:#ffffff;
+    --line:#ece3e6;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Karla', sans-serif;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{color:var(--wine); text-decoration:none;}
+  a:hover{text-decoration:underline;}
+
+  .layout{
+    display:grid;
+    grid-template-columns:1fr 340px;
+    max-width:1220px;
+    margin:0 auto;
+  }
+
+  /* ============ MAIN (left, white) ============ */
+  main{
+    padding:3.4rem 3.4rem 4rem 3.6rem;
+  }
+
+  .name-block h1{
+    font-family:'Poppins', sans-serif;
+    font-weight:800;
+    font-size:2.35rem;
+    letter-spacing:0.01em;
+    margin:0;
+    color:var(--ink);
+    line-height:1.15;
+  }
+  .name-block .role{
+    font-family:'Poppins', sans-serif;
+    font-weight:600;
+    font-size:1.05rem;
+    color:var(--wine);
+    margin:0.35rem 0 1.3rem;
+  }
+
+  .contact-row{
+    display:flex;
+    flex-wrap:wrap;
+    gap:1.4rem;
+    font-size:0.86rem;
+    color:var(--ink-soft);
+    padding-bottom:1.9rem;
+    border-bottom:2px solid var(--line);
+    margin-bottom:2.4rem;
+  }
+  .contact-row span{
+    display:inline-flex;
+    align-items:center;
+    gap:0.5rem;
+  }
+  .contact-row i{
+    color:var(--wine);
+    font-size:0.9rem;
+  }
+
+  section{margin-bottom:2.6rem;}
+
+  .section-title{
+    display:flex;
+    align-items:center;
+    gap:0.85rem;
+    margin-bottom:1.1rem;
+  }
+  .icon-badge{
+    width:34px;
+    height:34px;
+    min-width:34px;
+    border-radius:50%;
+    background:var(--wine);
+    color:#fff;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:0.92rem;
+  }
+  .section-title h2{
+    font-family:'Poppins', sans-serif;
+    font-size:1.02rem;
+    font-weight:700;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--ink);
+    margin:0;
+    white-space:nowrap;
+  }
+  .section-title .fill{
+    flex:1;
+    height:0;
+    border-top:2px dotted var(--line);
+    margin-top:2px;
+  }
+
+  .summary p{
+    max-width:66ch;
+    margin:0;
+    color:var(--ink-soft);
+  }
+
+  /* -------- experience / education entries -------- */
+  .entry{
+    margin-bottom:1.7rem;
+    padding-left:0.1rem;
+  }
+  .entry-head{
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:0.4rem 1rem;
+  }
+  .entry-head h3{
+    font-family:'Poppins', sans-serif;
+    font-size:1.02rem;
+    font-weight:700;
+    margin:0;
+    color:var(--ink);
+  }
+  .entry-org{
+    color:var(--wine);
+    font-weight:600;
+    font-size:0.92rem;
+    margin:0.15rem 0 0.5rem;
+  }
+  .entry-date{
+    display:inline-flex;
+    align-items:center;
+    gap:0.4rem;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    white-space:nowrap;
+  }
+  .entry-date i{color:var(--wine);}
+  .entry-loc{
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    display:block;
+    text-align:right;
+    margin-top:0.15rem;
+  }
+
+  .entry ul{
+    margin:0.4rem 0 0;
+    padding-left:1.15rem;
+    max-width:68ch;
+  }
+  .entry ul li{
+    margin-bottom:0.4rem;
+    font-size:0.94rem;
+    color:var(--ink);
+  }
+
+  .subjects-inline{
+    font-size:0.88rem;
+    color:var(--ink-soft);
+    margin:0.3rem 0 0;
+  }
+
+  /* -------- publications / talks -------- */
+  .pub{
+    display:flex;
+    gap:0.9rem;
+    margin-bottom:1rem;
+    max-width:70ch;
+  }
+  .pub i{
+    color:var(--wine);
+    margin-top:0.28rem;
+    font-size:0.8rem;
+  }
+  .pub .pub-title{
+    font-weight:600;
+    color:var(--ink);
+    font-size:0.95rem;
+  }
+  .pub .pub-meta{
+    font-size:0.82rem;
+    color:var(--ink-soft);
+    margin-top:0.15rem;
+  }
+
+  /* -------- references -------- */
+  .ref-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.4rem;
+  }
+  .ref-card{
+    border:1px solid var(--line);
+    border-left:3px solid var(--wine);
+    border-radius:4px;
+    padding:1rem 1.2rem;
+  }
+  .ref-card .who{font-weight:700; font-size:0.95rem;}
+  .ref-card .meta{font-size:0.8rem; color:var(--ink-soft); margin-top:0.3rem;}
+
+  /* ============ SIDEBAR (right, wine) ============ */
+  aside{
+    background:var(--wine);
+    color:#f3e9ec;
+    padding:3.2rem 2.1rem 3rem;
+  }
+
+  .photo-wrap{
+    display:flex;
+    justify-content:center;
+    margin-bottom:2.2rem;
+  }
+  .photo-wrap img{
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    object-fit:cover;
+    object-position:center 18%;
+    border:4px solid var(--gold);
+  }
+
+  aside h2{
+    font-family:'Poppins', sans-serif;
+    font-size:0.88rem;
+    font-weight:700;
+    letter-spacing:0.08em;
+    text-transform:uppercase;
+    margin:0 0 1.1rem;
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+  }
+  aside h2 i{
+    color:var(--gold);
+    font-size:0.95rem;
+  }
+
+  .side-section{
+    margin-bottom:2.3rem;
+    padding-bottom:2.1rem;
+    border-bottom:1px solid rgba(255,255,255,0.16);
+  }
+  .side-section:last-child{border-bottom:none; margin-bottom:0;}
+
+  /* skill bars */
+  .skill{margin-bottom:1rem;}
+  .skill:last-child{margin-bottom:0;}
+  .skill-label{
+    font-size:0.85rem;
+    margin-bottom:0.4rem;
+    color:#f3e9ec;
+  }
+  .skill-track{
+    height:5px;
+    border-radius:3px;
+    background:rgba(255,255,255,0.22);
+    overflow:hidden;
+  }
+  .skill-fill{
+    height:100%;
+    background:var(--gold);
+    border-radius:3px;
+  }
+
+  /* languages as rings */
+  .lang-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1.4rem;
+  }
+  .lang-item{
+    text-align:center;
+  }
+  .ring{
+    width:64px;
+    height:64px;
+    border-radius:50%;
+    margin:0 auto 0.55rem;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-family:'Poppins', sans-serif;
+    font-weight:700;
+    font-size:0.82rem;
+    color:#fff;
+  }
+  .lang-item .lang-name{
+    font-size:0.82rem;
+    color:#f3e9ec;
+  }
+
+  /* recognitions as icon rows */
+  .rec-item{
+    display:flex;
+    gap:0.7rem;
+    align-items:flex-start;
+    margin-bottom:0.95rem;
+    font-size:0.85rem;
+  }
+  .rec-item:last-child{margin-bottom:0;}
+  .rec-item i{
+    color:var(--gold);
+    margin-top:0.2rem;
+    font-size:0.9rem;
+  }
+
+  /* personal data mini list */
+  .mini-list{
+    list-style:none;
+    margin:0;
+    padding:0;
+    font-size:0.85rem;
+  }
+  .mini-list li{
+    display:flex;
+    gap:0.65rem;
+    margin-bottom:0.7rem;
+  }
+  .mini-list li:last-child{margin-bottom:0;}
+  .mini-list i{color:var(--gold); margin-top:0.15rem; font-size:0.85rem;}
+
+  footer{
+    text-align:center;
+    padding:2.2rem 0 2.6rem;
+    font-size:0.78rem;
+    color:var(--ink-soft);
+    border-top:1px solid var(--line);
+  }
+
+  @media (max-width: 900px){
+    .layout{grid-template-columns:1fr;}
+    aside{order:-1;}
+    main{padding:2.4rem 1.6rem 3rem;}
+    .ref-grid{grid-template-columns:1fr;}
+  }
+</style>
+</head>
+<body>
+
+<div class="layout">
+
+  <main>
+    <div class="name-block">
+      <h1>Leonardo Andrés Ferreira Vélez</h1>
+      <p class="role">Historiador · Magíster en Desarrollo y Crecimiento Económico</p>
+    </div>
+
+    <div class="contact-row">
+      <span><i class="fa-solid fa-envelope"></i> leonardoaferreira@hotmail.com</span>
+      <span><i class="fa-solid fa-envelope"></i> ferreiraleonardo@unbosque.edu.co</span>
+      <span><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia</span>
+    </div>
+
+    <section class="summary">
+      <div class="section-title">
+        <div class="icon-badge"><i class="fa-solid fa-user"></i></div>
+        <h2>Resumen profesional</h2>
+        <div class="fill"></div>
+      </div>
+      <p>Historiador y economista con cerca de dos décadas de trayectoria docente e investigativa en educación superior, especializado en historia económica, economía de la salud y políticas públicas. Profesor de tiempo completo del Departamento de Humanidades de la Universidad El Bosque, con experiencia adicional en la coordinación de competencias genéricas, diseño de instrumentos de evaluación y divulgación científica.</p>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="icon-badge"><i class="fa-solid fa-briefcase"></i></div>
+        <h2>Experiencia laboral y académica</h2>
+        <div class="fill"></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Docente «Core Faculty», tiempo completo</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2012-II — 2025-I</span>
+        </div>
+        <p class="entry-org">Departamento de Humanidades, Universidad El Bosque</p>
+        <ul>
+          <li>Economía de la Salud</li>
+          <li>Seminario de Filosofía e Historia de las Ciencias: Políticas públicas en salud</li>
+          <li>Historia de la Cultura · Historia de la Medicina</li>
+          <li>Arte político y globalización · Estructuración del pensamiento</li>
+          <li>Divulgación científica audiovisual («Vlogeando Ciencia»)</li>
+          <li>Seminario de Complejidad: Economía y Gestión de la Complejidad</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Coordinador de división</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2013 — 2025-I</span>
+        </div>
+        <p class="entry-org">Departamento de Humanidades, Universidad El Bosque</p>
+        <ul>
+          <li>Fortalecimiento de las competencias genéricas Saber Pro.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Docente hora cátedra, Maestría en Salud Pública</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2016-II — 2017-II</span>
+        </div>
+        <p class="entry-org">Universidad El Bosque</p>
+        <ul>
+          <li>Economía de la Salud</li>
+          <li>Modelos de reformas en el sistema sanitario</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Conferencista y tallerista en competencias genéricas</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2016 — 2019</span>
+        </div>
+        <p class="entry-org">Diseño y validación de ítems tipo Saber Pro; integración en el syllabus</p>
+        <ul>
+          <li>Universidad del Quindío — 18 al 22 de julio de 2016</li>
+          <li>Universidad Santo Tomás, sede Bogotá — 3 al 5 de julio de 2017</li>
+          <li>Fundación Universitaria María Cano, sede Medellín — 10 al 15 de julio de 2017</li>
+          <li>Escuela Naval de Cadetes «Almirante Padilla» — 18 al 22 de junio de 2018</li>
+          <li>Universidad El Bosque — oct. 2017, jun. y dic. 2018, jun. 2019</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Docente hora cátedra, Maestría en Estudios Sociales y Culturales</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2019-II</span>
+        </div>
+        <p class="entry-org">Universidad El Bosque</p>
+        <ul>
+          <li>Asignatura: Desarrollo Económico y Cultura.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Elaboración de ítems, selección a Contralor(a) de Cundinamarca</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2019-II</span>
+        </div>
+        <p class="entry-org">Facultad de Derecho, Universidad El Bosque</p>
+        <ul>
+          <li>Proceso de selección, período 2020–2021.</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Profesor de ciencias sociales</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2008-I — 2016-I</span>
+        </div>
+        <p class="entry-org">Programa «Nivelación de Bachilleres», Pontificia Universidad Javeriana</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Docente hora cátedra</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2007-II–2010-II · 2012-II–2013-I</span>
+        </div>
+        <p class="entry-org">Pontificia Universidad Javeriana</p>
+        <ul>
+          <li>Historia Económica General — Departamento de Ciencias Sociales</li>
+          <li>Historia Económica Mundial — Carrera de Economía</li>
+        </ul>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Docente hora cátedra</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> 2006-II — 2008-I</span>
+        </div>
+        <p class="entry-org">Universidad del Rosario</p>
+        <ul>
+          <li>Historia de las religiones del Mundo Antiguo</li>
+          <li>Conflictos internacionales y religión</li>
+        </ul>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="icon-badge"><i class="fa-solid fa-graduation-cap"></i></div>
+        <h2>Formación académica</h2>
+        <div class="fill"></div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Maestría en Desarrollo y Crecimiento Económico</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> Grado: ago. 2013</span>
+        </div>
+        <p class="entry-org">Universidad Carlos III de Madrid</p>
+      </div>
+
+      <div class="entry">
+        <div class="entry-head">
+          <h3>Historiador</h3>
+          <span class="entry-date"><i class="fa-regular fa-calendar"></i> Grado: may. 2006</span>
+        </div>
+        <p class="entry-org">Pontificia Universidad Javeriana</p>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="icon-badge"><i class="fa-solid fa-chalkboard-user"></i></div>
+        <h2>Formación docente</h2>
+        <div class="fill"></div>
+      </div>
+      <ul style="margin:0; padding-left:1.15rem; max-width:70ch;">
+        <li style="margin-bottom:0.55rem;"><strong>2022</strong> — «Apropiación social del conocimiento», MinTIC, OEI y Universidad de Cartagena · 90 h</li>
+        <li style="margin-bottom:0.55rem;"><strong>2018</strong> — «Content and Language Integrated Learning (CLIL)», Universidad El Bosque · 90 h</li>
+        <li style="margin-bottom:0.55rem;"><strong>2017</strong> — «Experto en mediación pedagógica y diseño de REAV», Universidad El Bosque · 144 h</li>
+        <li style="margin-bottom:0.55rem;"><strong>2012</strong> — «Análisis de Series de Tiempo Económicas y Financieras con RATS», Universidad Nacional de Colombia · 30 h</li>
+        <li><strong>2012</strong> — «Métodos de macroeconometría con RATS, JMULTI y MATLAB», Universidad Nacional de Colombia · 30 h</li>
+      </ul>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="icon-badge"><i class="fa-solid fa-book"></i></div>
+        <h2>Publicaciones</h2>
+        <div class="fill"></div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">«La paradoja de un Liberalismo Intervencionista: Colombia, años treintas cuarentas»</p>
+          <p class="pub-meta">Revista Historia Actual Online, N.º 12, invierno de 2007. Pp. 19–32. ISSN 1696-2060. Indexada en DIALNET.</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">«Dos Lenguajes, un proyecto: La Independencia»</p>
+          <p class="pub-meta">Acervo — Revista de Estudios Históricos y Documentales, Vol. II, N.º 2, jul.–dic. 2005. ISSN 1690-3579.</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">«Diseño y validación cualitativa de una prueba de lectura crítica para educación terciaria en Colombia»</p>
+          <p class="pub-meta">Congreso de Docencia en Educación Superior (CODES), 2023 — <a href="https://doi.org/10.15443/codes2064" target="_blank" rel="noopener">doi.org/10.15443/codes2064</a></p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="icon-badge"><i class="fa-solid fa-microphone-lines"></i></div>
+        <h2>Ponencias internacionales</h2>
+        <div class="fill"></div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">«Dinámica de los Problemas del Mundo Contemporáneo» — ADHILAC</p>
+          <p class="pub-meta">Universidad de La Habana, Cuba · 11–13 ene. 2005</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">Society for Latin American Studies (SLAS) 2005 Conference</p>
+          <p class="pub-meta">Universidad de Derby, Inglaterra · 8–10 abr. 2005</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">XII Congreso FIEALC — «Los procesos de modernización en América Latina y el Caribe»</p>
+          <p class="pub-meta">Instituto Italo Latinoamericano, Roma, Italia · 27–30 sep. 2005</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">I Congreso de la Red América Latina (GIS)</p>
+          <p class="pub-meta">Universidad de La Rochelle, Francia · 3–5 nov. 2005</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">XIV Congreso Internacional de AHILA — «Europa-América: paralelismos en la distancia»</p>
+          <p class="pub-meta">Universitat Jaume I, Castellón, España · 20–24 sep. 2005</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">XVII Congreso Internacional de AHILA — «Entre Espacios»</p>
+          <p class="pub-meta">Freie Universität Berlin, Alemania · 9–13 sep. 2014</p>
+        </div>
+      </div>
+
+      <div class="pub">
+        <i class="fa-solid fa-caret-right"></i>
+        <div>
+          <p class="pub-title">XVIII Congreso FIEALC — «América Latina y el mundo del siglo XXI»</p>
+          <p class="pub-meta">Universidad Megatrend «John Naisbitt», Belgrado, Serbia · 25–28 jul. 2017</p>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="section-title">
+        <div class="icon-badge"><i class="fa-solid fa-address-card"></i></div>
+        <h2>Referencias</h2>
+        <div class="fill"></div>
+      </div>
+      <div class="ref-grid">
+        <div class="ref-card">
+          <p class="who">Óscar Saldarriaga Vélez</p>
+          <p class="meta">Dr. en Filología y Letras e Historia, UC Louvain (Bélgica). Profesor, Pontificia Universidad Javeriana.<br>+57-1-3208320 ext. 5900<br><a href="mailto:saldarri@javeriana.edu.co">saldarri@javeriana.edu.co</a></p>
+        </div>
+        <div class="ref-card">
+          <p class="who">Eduardo Escallón Largacha</p>
+          <p class="meta">Dr. en Estudios Literarios, Boston College. Profesor, Universidad de los Andes.<br>+57-1-3394949 ext. 2282<br><a href="mailto:je.escallon27@uniandes.edu.co">je.escallon27@uniandes.edu.co</a></p>
+        </div>
+        <div class="ref-card">
+          <p class="who">Leandro Prados de la Escosura</p>
+          <p class="meta">Dr. en Economía, U. Complutense de Madrid y Oxford University. Profesor, Universidad Carlos III de Madrid.<br>+34-91 624 9623<br><a href="mailto:leandro.prados.delaescosura@uc3m.es">leandro.prados.delaescosura@uc3m.es</a></p>
+        </div>
+      </div>
+    </section>
+
+    <footer>Leonardo A. Ferreira Vélez · C.C. 79.949.822 de Bogotá</footer>
+  </main>
+
+  <aside>
+    <div class="photo-wrap">
+      <img src="assets/foto.png" alt="Leonardo Andrés Ferreira Vélez">
+    </div>
+
+    <div class="side-section">
+      <h2><i class="fa-solid fa-id-card"></i> Datos personales</h2>
+      <ul class="mini-list">
+        <li><i class="fa-solid fa-cake-candles"></i> 29 de diciembre de 1978</li>
+        <li><i class="fa-solid fa-location-dot"></i> Bogotá, Colombia</li>
+        <li><i class="fa-solid fa-id-badge"></i> C.C. 79.949.822</li>
+      </ul>
+    </div>
+
+    <div class="side-section">
+      <h2><i class="fa-solid fa-chart-simple"></i> Paquetes informáticos</h2>
+      <div class="skill"><div class="skill-label">STATA / E-Views</div><div class="skill-track"><div class="skill-fill" style="width:88%"></div></div></div>
+      <div class="skill"><div class="skill-label">Power BI</div><div class="skill-track"><div class="skill-fill" style="width:80%"></div></div></div>
+      <div class="skill"><div class="skill-label">QGIS · Gephi</div><div class="skill-track"><div class="skill-fill" style="width:75%"></div></div></div>
+      <div class="skill"><div class="skill-label">Vensim</div><div class="skill-track"><div class="skill-fill" style="width:78%"></div></div></div>
+      <div class="skill"><div class="skill-label">Microsoft Office / Project</div><div class="skill-track"><div class="skill-fill" style="width:92%"></div></div></div>
+    </div>
+
+    <div class="side-section">
+      <h2><i class="fa-solid fa-globe"></i> Idiomas</h2>
+      <div class="lang-grid">
+        <div class="lang-item">
+          <div class="ring" style="background:conic-gradient(var(--gold) 0% 85%, rgba(255,255,255,0.18) 85% 100%);">C1</div>
+          <div class="lang-name">Inglés</div>
+        </div>
+        <div class="lang-item">
+          <div class="ring" style="background:conic-gradient(var(--gold) 0% 100%);">Nativo</div>
+          <div class="lang-name">Español</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-section">
+      <h2><i class="fa-solid fa-award"></i> Reconocimientos</h2>
+      <div class="rec-item">
+        <i class="fa-solid fa-trophy"></i>
+        <span>Mención honorífica, trabajo de grado de maestría: «Modelos de desarrollo en Colombia, 1940–1950».</span>
+      </div>
+      <div class="rec-item">
+        <i class="fa-solid fa-medal"></i>
+        <span>Premio a la Excelencia Académica en Vocación Enseñanza-Aprendizaje, Universidad El Bosque, 2018.</span>
+      </div>
+    </div>
+
+    <div class="side-section" style="border-bottom:none; margin-bottom:0; padding-bottom:0;">
+      <h2><i class="fa-solid fa-star"></i> Áreas de interés</h2>
+      <div class="rec-item"><i class="fa-solid fa-landmark"></i><span>Historia económica</span></div>
+      <div class="rec-item"><i class="fa-solid fa-heart-pulse"></i><span>Economía de la salud</span></div>
+      <div class="rec-item"><i class="fa-solid fa-diagram-project"></i><span>Dinámica de sistemas y análisis de redes</span></div>
+      <div class="rec-item"><i class="fa-solid fa-video"></i><span>Divulgación científica audiovisual</span></div>
+    </div>
+  </aside>
+
+</div>
+
+</body>
+</html>
