@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoja de Vida - Leonardo A. Ferreira Vélez</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Arial, sans-serif;
+            background: #f4f7fc;
+            color: #1e2b3a;
+            padding: 30px 20px;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 16px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.08);
+            padding: 40px 45px;
+        }
+
+        /* ENCABEZADO */
+        .header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 3px solid #0a3b5c;
+            padding-bottom: 20px;
+            margin-bottom: 25px;
+        }
+
+        .header-left h1 {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0a3b5c;
+            letter-spacing: -0.5px;
+        }
+
+        .header-left .subtitle {
+            font-size: 18px;
+            font-weight: 400;
+            color: #3a5a7a;
+            margin-top: 4px;
+        }
+
+        .contacto {
+            text-align: right;
+            font-size: 15px;
+            color: #1e3b5a;
+        }
+
+        .contacto a {
+            color: #0a3b5c;
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contacto a:hover {
+            text-decoration: underline;
+        }
+
+        .contacto div {
+            margin-bottom: 4px;
+        }
+
+        /* SECCIONES */
+        .section {
+            margin-bottom: 32px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0a3b5c;
+            border-bottom: 2px solid #d0dfec;
+            padding-bottom: 6px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .section-title span {
+            background: #0a3b5c;
+            color: white;
+            font-size: 16px;
+            border-radius: 50%;
+            width: 28px;
+            height: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* DATOS PERSONALES / ACADÉMICOS */
+        .two-col {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+        }
+
+        .data-block {
+            background: #f0f5fb;
+            padding: 16px 20px;
+            border-radius: 12px;
+        }
+
+        .data-block p {
+            margin-bottom: 4px;
+        }
+
+        .data-block strong {
+            color: #0a3b5c;
+        }
+
+        /* LISTAS */
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        ul li {
+            padding-left: 22px;
+            position: relative;
+            margin-bottom: 6px;
+        }
+
+        ul li::before {
+            content: "?";
+            color: #0a3b5c;
+            font-weight: 700;
+            position: absolute;
+            left: 0;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px 30px;
+        }
+
+        /* EXPERIENCIA */
+        .job {
+            margin-bottom: 22px;
+        }
+
+        .job-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            font-weight: 600;
+            color: #0a3b5c;
+        }
+
+        .job-title {
+            font-size: 17px;
+        }
+
+        .job-place {
+            font-weight: 500;
+            color: #1e4b6e;
+        }
+
+        .job-date {
+            font-weight: 400;
+            color: #4a6a8a;
+            font-size: 15px;
+        }
+
+        .job-desc {
+            margin-top: 4px;
+            padding-left: 10px;
+            border-left: 3px solid #b0cce0;
+            padding-left: 16px;
+            font-size: 15px;
+        }
+
+        .job-desc ul {
+            margin-top: 2px;
+        }
+
+        .job-desc ul li {
+            padding-left: 18px;
+        }
+
+        /* PUBLICACIONES / PONENCIAS */
+        .pub-item {
+            margin-bottom: 8px;
+            font-size: 15px;
+        }
+
+        .pub-item a {
+            color: #0a3b5c;
+            text-decoration: none;
+            border-bottom: 1px dotted #b0cce0;
+        }
+
+        .pub-item a:hover {
+            border-bottom: 1px solid #0a3b5c;
+        }
+
+        /* IDIOMAS */
+        .lang-badge {
+            display: inline-block;
+            background: #e6eff7;
+            padding: 4px 14px;
+            border-radius: 20px;
+            font-weight: 500;
+            color: #0a3b5c;
+            margin-right: 8px;
+        }
+
+        /* REFERENCIAS */
+        .ref {
+            background: #f7faff;
+            padding: 14px 18px;
+            border-radius: 10px;
+            margin-bottom: 12px;
+            border-left: 4px solid #0a3b5c;
+        }
+
+        .ref strong {
+            color: #0a3b5c;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            .header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 12px;
+            }
+
+            .contacto {
+                text-align: left;
+                width: 100%;
+            }
+
+            .two-col {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+
+            .job-header {
+                flex-direction: column;
+                gap: 2px;
+            }
+
+            .header-left h1 {
+                font-size: 26px;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+            .container {
+                box-shadow: none;
+                padding: 20px;
+            }
+            .section {
+                page-break-inside: avoid;
+            }
+        }
+
+        /* FOOTER */
+        .footer {
+            margin-top: 30px;
+            padding-top: 18px;
+            border-top: 1px solid #d0dfec;
+            font-size: 14px;
+            color: #5a7a9a;
+            text-align: center;
+        }
+
+        .badge {
+            background: #0a3b5c;
+            color: white;
+            padding: 2px 12px;
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- ===== ENCABEZADO ===== -->
+    <div class="header">
+        <div class="header-left">
+            <h1>Leonardo Andrés Ferreira Vélez</h1>
+            <div class="subtitle">Historiador · Magíster en Desarrollo y Crecimiento Económico</div>
+        </div>
+        <div class="contacto">
+            <div>?? <a href="mailto:leonardoaferreira@hotmail.com">leonardoaferreira@hotmail.com</a></div>
+            <div>?? <a href="mailto:ferreiraléonardo@unbosque.edu.co">ferreiraléonardo@unbosque.edu.co</a></div>
+            <div style="margin-top:6px; font-size:14px; color:#4a6a8a;">?? C.C. 79.949.822 de Bogotá</div>
+        </div>
+    </div>
+
+    <!-- ===== DATOS PERSONALES + ACADÉMICOS ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Datos Personales &amp; Académicos</div>
+        <div class="two-col">
+            <div class="data-block">
+                <p><strong>?? Fecha de nacimiento:</strong> Diciembre 29 de 1978</p>
+                <p><strong>?? Lugar:</strong> Bogotá</p>
+            </div>
+            <div class="data-block">
+                <p><strong>?? Título universitario:</strong> Historiador — Pontificia Universidad Javeriana (2006)</p>
+                <p><strong>?? Maestría:</strong> Desarrollo y crecimiento económico — Universidad Carlos III de Madrid (2013)</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== RECONOCIMIENTOS ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Reconocimientos</div>
+        <ul>
+            <li>Mención Honorífica por el trabajo de grado: <em>“Modelos de desarrollo en Colombia, 1940-1950: consolidación y conflicto”</em>.</li>
+            <li>Premio a la Excelencia Académica en Vocación Enseñanza-Aprendizaje, Universidad El Bosque 2018.</li>
+        </ul>
+    </div>
+
+    <!-- ===== PAQUETES INFORMÁTICOS ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Paquetes informáticos</div>
+        <div style="display:flex; flex-wrap:wrap; gap:8px 16px; background:#f0f5fb; padding:12px 18px; border-radius:30px;">
+            <span class="badge">STATA</span>
+            <span class="badge">E-Views</span>
+            <span class="badge">Power BI</span>
+            <span class="badge">Microsoft Office</span>
+            <span class="badge">Microsoft Project</span>
+            <span class="badge">QGIS</span>
+            <span class="badge">Vensim</span>
+            <span class="badge">Gephi</span>
+        </div>
+    </div>
+
+    <!-- ===== FORMACIÓN DOCENTE Y LABORAL ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Formación docente y laboral</div>
+        <ul>
+            <li><strong>2022:</strong> Diplomado “Apropiación social del conocimiento” — MinTIC, OEI y Universidad de Cartagena (90h).</li>
+            <li><strong>2018:</strong> Diplomado “Content and Language Integrated Learning-CLIL” — Universidad El Bosque (90h).</li>
+            <li><strong>2017:</strong> Diplomado “Experto en mediación pedagógica y diseño de REAV” — Universidad El Bosque (144h).</li>
+            <li><strong>2012:</strong> Curso “Análisis de Series de Tiempo Económicas y Financieras con RATS” — UNAL (30h).</li>
+            <li><strong>2012:</strong> Curso “Métodos de macroeconometría con aplicaciones en RATS, JMULTI y MATLAB” — UNAL (30h).</li>
+        </ul>
+    </div>
+
+    <!-- ===== EXPERIENCIA LABORAL Y ACADÉMICA ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Experiencia laboral y académica</div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Docente hora cátedra</span>
+                <span class="job-place">Universidad del Rosario</span>
+                <span class="job-date">2006 II – 2008 I</span>
+            </div>
+            <div class="job-desc">
+                Asignaturas: “Historia de las religiones del Mundo Antiguo” y “Conflictos internacionales y religión”.
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Docente hora cátedra</span>
+                <span class="job-place">Pontificia Universidad Javeriana</span>
+                <span class="job-date">2007 II – 2010 II / 2012 II – 2013 I</span>
+            </div>
+            <div class="job-desc">
+                “Historia Económica General” (Dpto. Cs. Sociales) y “Historia Económica Mundial” (Carrera de Economía).
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Docente Core Faculty (tiempo completo)</span>
+                <span class="job-place">Universidad El Bosque</span>
+                <span class="job-date">2008 I – 2016 I / 2012 II – 2025 I</span>
+            </div>
+            <div class="job-desc">
+                Asignaturas: Economía de la Salud; Seminario de Filosofía e Historia de las Ciencias; Políticas públicas en salud; Historia de la Cultura; Historia de la Medicina; Arte político y globalización; Estructuración del pensamiento; Divulgación científica audiovisual; Seminario de Complejidad: Economía y Gestión de la Complejidad.
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Docente (Maestría en Salud Pública)</span>
+                <span class="job-place">Universidad El Bosque</span>
+                <span class="job-date">2016 II – 2017 II</span>
+            </div>
+            <div class="job-desc">Economía de la Salud y Modelos de reformas en el sistema sanitario.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Coordinador de división</span>
+                <span class="job-place">Universidad El Bosque – Dpto. Humanidades</span>
+                <span class="job-date">2013 – 2025 I</span>
+            </div>
+            <div class="job-desc">Fortalecimiento de competencias genéricas Saber Pro.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Conferencista y tallerista</span>
+                <span class="job-place">Múltiples universidades</span>
+                <span class="job-date">2016 – 2019</span>
+            </div>
+            <div class="job-desc">
+                Talleres de capacitación en competencias genéricas (diseño de ítems Saber Pro e integración curricular). Universidades: El Quindío, Santo Tomás (Bogotá), María Cano (Medellín), Escuela Naval “Almirante Padilla” y Universidad El Bosque.
+            </div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Docente (Maestría en Estudios Sociales y Culturales)</span>
+                <span class="job-place">Universidad El Bosque</span>
+                <span class="job-date">2019 II</span>
+            </div>
+            <div class="job-desc">Desarrollo Económico y Cultura.</div>
+        </div>
+
+        <div class="job">
+            <div class="job-header">
+                <span class="job-title">Elaboración de ítems</span>
+                <span class="job-place">Contraloría de Cundinamarca (proceso)</span>
+                <span class="job-date">2019 II</span>
+            </div>
+            <div class="job-desc">Prueba de selección para aspirantes al cargo de contralor(a) 2020-2021.</div>
+        </div>
+    </div>
+
+    <!-- ===== PUBLICACIONES ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Publicaciones</div>
+        <div class="pub-item">
+            1. “La paradoja de un Liberalismo Intervencionista: Colombia, años treintas cuarentas”. <em>Revista Historia Actual Online</em>, N°12, Invierno 2007. Págs. 19-32. ISSN: 1696-2060. Indexado en DIALNET.
+        </div>
+        <div class="pub-item">
+            2. “Dos Lenguajes, un proyecto: La Independencia”. <em>Acervo- Revista de Estudios Históricos y Documentales</em>, Vol. II, No. 2, Julio - Diciembre 2005. ISSN 1690-3579.
+        </div>
+        <div class="pub-item">
+            3. “Diseño y validación cualitativa de una prueba de lectura crítica para educación terciaria en Colombia”. <em>Congreso De Docencia En Educación Superior CODES</em>, 2023. <a href="https://doi.org/10.15443/codes2064" target="_blank">https://doi.org/10.15443/codes2064</a>
+        </div>
+    </div>
+
+    <!-- ===== PONENCIAS ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Ponencias en congresos internacionales</div>
+        <ul>
+            <li><strong>2005:</strong> “Dinámica de los Problemas del Mundo Contemporáneo” — ADHILAC, Universidad de La Habana (Cuba).</li>
+            <li><strong>2005:</strong> “Society for Latin American Studies (SLAS) Conference” — Universidad de Derby (Inglaterra).</li>
+            <li><strong>2005:</strong> “Los procesos de modernización en América Latina” — FIEALC, Instituto Italo Latinoamericano (Roma, Italia).</li>
+            <li><strong>2005:</strong> “Discours et pratiques de pouvoirs en Amérique latine” — Universidad de La Rochelle (Francia).</li>
+            <li><strong>2005:</strong> “Europa-América: paralelismos en la distancia” — AHILA, Universitat Jaume I (Castellón, España).</li>
+            <li><strong>2014:</strong> “Entre Espacios: La historia latinoamericana en el contexto global” — AHILA, Freie Universität Berlin (Alemania).</li>
+            <li><strong>2017:</strong> “América Latina y el mundo del siglo XXI” — FIEALC, Universidad Megatrend (Belgrado, Serbia).</li>
+        </ul>
+    </div>
+
+    <!-- ===== IDIOMAS ===== -->
+    <div class="section">
+        <div class="section-title"><span>???</span> Idiomas</div>
+        <div style="background:#f0f5fb; padding:14px 20px; border-radius:12px;">
+            <p><strong>Inglés:</strong> Nivel alto — Certificación C1 (Centro de lenguas Universidad El Bosque, 2019).</p>
+            <p><strong>TOEFL IBT:</strong> 92/120 (Reading 27, Listening 23, Speaking 20, Writing 22) — 19 de diciembre de 2014.</p>
+        </div>
+    </div>
+
+    <!-- ===== REFERENCIAS ===== -->
+    <div class="section">
+        <div class="section-title"><span>??</span> Referencias</div>
+
+        <div class="ref">
+            <strong>Óscar Saldarriaga Vélez</strong><br>
+            Doctor en filología y letras e historia — Université Catholique de Louvain (Bélgica)<br>
+            Profesor, Pontificia Universidad Javeriana<br>
+            ?? +57-1-3208320 ext. 5900 · ?? <a href="mailto:saldarri@javeriana.edu.co">saldarri@javeriana.edu.co</a>
+        </div>
+
+        <div class="ref">
+            <strong>Eduardo Escallón Largacha</strong><br>
+            Doctor en estudios literarios — Boston College<br>
+            Profesor, Universidad de los Andes<br>
+            ?? +57-1-3394949 ext. 2282 · ?? <a href="mailto:je.escallon27@uniandes.edu.co">je.escallon27@uniandes.edu.co</a>
+        </div>
+
+        <div class="ref">
+            <strong>Leandro Prados de la Escosura</strong><br>
+            Doctor en economía — Universidad Complutense de Madrid y Oxford University<br>
+            Profesor, Universidad Carlos III de Madrid<br>
+            ?? +34-91 624 9623 · ?? <a href="mailto:leandro.prados.delaescosura@uc3m.es">leandro.prados.delaescosura@uc3m.es</a>
+        </div>
+    </div>
+
+    <!-- ===== FOOTER ===== -->
+    <div class="footer">
+        Leonardo A. Ferreira Vélez · C.C. 79.949.822 de Bogotá
+    </div>
+
+</div>
+
+</body>
+</html>
